@@ -1,26 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[CodingHuaHua]]></title>
-  <subtitle><![CDATA[Have an aim in life.]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://changqingshuya.github.io/"/>
-  <updated>2014-03-17T14:01:16.957Z</updated>
-  <id>http://changqingshuya.github.io/</id>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="codingbird,陈显鹭,java,android">
   
-  <author>
-    <name><![CDATA[changqingshuya]]></name>
-    <email><![CDATA[liuchangqing1210@gmail.com]]></email>
-  </author>
+  <title>Web Service项目搭建 | CodingHuaHua</title>
+  <meta name="author" content="changqingshuya">
   
-  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  <meta name="description" content="你总是要有一个理想.">
   
-  <entry>
-    <title><![CDATA[Web Service项目搭建]]></title>
-    <link href="http://changqingshuya.github.io/2014/02/09/web_service01/"/>
-    <id>http://changqingshuya.github.io/2014/02/09/web_service01/</id>
-    <published>2014-02-09T03:24:14.000Z</published>
-    <updated>2014-03-17T13:59:42.000Z</updated>
-    <content type="html"><![CDATA[<p>　　    为了能够实现异构系统的交互我们可以使用webservice解决这个问题。异构系统之间的交互可以有多种方法实现，webservice给我们提供了一种很好的思路，找到异构系统之间的桥梁，XML便是这样一种媒介，语言可以不同，基于XML定义出相应的协议，不同的语言实现协议即可达到不同系统的互通。
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Web Service项目搭建"/>
+  <meta property="og:site_name" content="CodingHuaHua"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="CodingHuaHua" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["qzone","tsina","weixin","renren","tqq","douban","fbook","twi"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"1","bdPos":"right","bdTop":"236.5"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">CodingHuaHua</a></h1>
+  <h2><a href="/">Have an aim in life.</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+    <li><a href='/about'>About me</a></li>
+    <li><a href='/atom.xml'>RSS</a></li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-02-09T03:24:14.000Z"><a href="/2014/02/09/web_service01/">2014-02-09</a></time>
+      
+      
+  
+    <h1 class="title">Web Service项目搭建</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>　　    为了能够实现异构系统的交互我们可以使用webservice解决这个问题。异构系统之间的交互可以有多种方法实现，webservice给我们提供了一种很好的思路，找到异构系统之间的桥梁，XML便是这样一种媒介，语言可以不同，基于XML定义出相应的协议，不同的语言实现协议即可达到不同系统的互通。
 <a id="more"></a></p>
 <p>　　Webservice使用XML来编解码数据，使用SOAP来传输数据；在我们学习的过程中最重要的也许是两方面的内容：SOAP和WSDL。</p>
 <p>　　SOAP：Simple Object Access Protocol（简易对象访问协议）。有了XML作为数据格式，如何将对象和XML进行映射，SOAP协议就是对XML数据进行处理和传输从而满足我们的需求。更确切的说是：SOAP协议=HTTP协议+XML数据格式。SOAP协议将XML数据添加一些HTTP头信息进行封装传输。</p>
@@ -221,24 +264,117 @@ targetNamespace=&quot;http://service.edu.cn&quot;&gt;
 <p>Jax-ws2.2和jdk6冲突问题：</p>
 <p>报错信息：java.lang.NoSuchMethodError: javax.xml.ws.WebFault.messageName()Ljava/lang/String;</p>
 <p>解决方法：在jdk的jre目录中建立endorsed文件夹（我的目录是：C:\Program Files (x86)\Java\jdk1.6.0_27\jre\lib\endorsed），将jaxws-ri-2.2.5中的jaxws-api.jar拷贝到endorsed文件夹中。同时将endorsed文件夹拷贝到tomcat根目录一份即可。</p>
-]]></content>
-    <summary type="html"><![CDATA[<p>　　    为了能够实现异构系统的交互我们可以使用webservice解决这个问题。异构系统之间的交互可以有多种方法实现，webservice给我们提供了一种很好的思路，找到异构系统之间的桥梁，XML便是这样一种媒介，语言可以不同，基于XML定义出相应的协议，不同的语言实现协议即可达到不同系统的互通。
-]]></summary>
-    
-      <category term="webservice" scheme="http://changqingshuya.github.io/tags/webservice/"/>
-    
-  </entry>
+
+      
+    </div>
+    <footer>
+      
+        
+        
   
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://changqingshuya.github.io/2014/02/09/hello-world/"/>
-    <id>http://changqingshuya.github.io/2014/02/09/hello-world/</id>
-    <published>2014-02-09T03:18:35.000Z</published>
-    <updated>2014-02-09T03:18:36.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
-]]></content>
-    
-    
-  </entry>
+  <div class="tags">
+    <a href="/tags/webservice/">webservice</a>
+  </div>
+
+	<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+ <!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xianlubird"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:changqingshuya.github.io">
+  </form>
+</div>
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=2204381500&verifier=607c53d8&dpc=1"></iframe>
+
   
-</feed>
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/webservice/">webservice</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Tag Cloud</h3>
+  <div class="entry">
+    <a href="/tags/webservice/" style="font-size: NaNpx;">webservice</a>
+  </div>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/02/09/web_service01/">Web Service项目搭建</a>
+      </li>
+    
+      <li>
+        <a href="/2014/02/09/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 changqingshuya
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
