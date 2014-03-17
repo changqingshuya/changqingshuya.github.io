@@ -251,8 +251,7 @@ targetNamespace=&quot;http://service.edu.cn&quot;&gt;
 </code></pre><p>在webcontent目录下建立sun-jaxws.xml文件绑定我们的服务实现类，编写如下：
     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
     <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
-      <endpoint name="BookService" 
-           implementation="cn.edu.service.BookServiceImpl" url-pattern="/us"/>
+          <endpoint name="BookService" implementation="cn.edu.service.BookServiceImpl" url-pattern="/us"/>
     </endpoints></p>
 <p>启动web项目访问：<a href="http://localhost:8080/Library/us?wsdl即可访问到xml格式的wsdl内容。" target="_blank">http://localhost:8080/Library/us?wsdl即可访问到xml格式的wsdl内容。</a></p>
 <p>客户端：</p>
