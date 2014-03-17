@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Have an aim in life.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://changqingshuya.github.io/"/>
-  <updated>2014-03-17T14:01:16.957Z</updated>
+  <updated>2014-03-17T14:05:59.187Z</updated>
   <id>http://changqingshuya.github.io/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[Web Service项目搭建]]></title>
-    <link href="http://changqingshuya.github.io/2014/02/09/web_service01/"/>
-    <id>http://changqingshuya.github.io/2014/02/09/web_service01/</id>
-    <published>2014-02-09T03:24:14.000Z</published>
-    <updated>2014-03-17T13:59:42.000Z</updated>
+    <link href="http://changqingshuya.github.io/2014/03/17/web_service01/"/>
+    <id>http://changqingshuya.github.io/2014/03/17/web_service01/</id>
+    <published>2014-03-17T14:05:14.000Z</published>
+    <updated>2014-03-17T14:05:48.000Z</updated>
     <content type="html"><![CDATA[<p>　　    为了能够实现异构系统的交互我们可以使用webservice解决这个问题。异构系统之间的交互可以有多种方法实现，webservice给我们提供了一种很好的思路，找到异构系统之间的桥梁，XML便是这样一种媒介，语言可以不同，基于XML定义出相应的协议，不同的语言实现协议即可达到不同系统的互通。
 <a id="more"></a></p>
 <p>　　Webservice使用XML来编解码数据，使用SOAP来传输数据；在我们学习的过程中最重要的也许是两方面的内容：SOAP和WSDL。</p>
